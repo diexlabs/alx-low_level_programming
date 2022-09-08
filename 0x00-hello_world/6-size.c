@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-/*
- * main - prints sizes of data types.
+/**
+ * main - Entry point
  *
- * Description: prints the sizes of datatypes on machines.
+ * Description: 'the program's description'
  *
- * Return: 0 as exit status
+ * Return: Always 0 (Success)
  */
 
 int main(void)
