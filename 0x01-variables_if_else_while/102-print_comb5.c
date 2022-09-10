@@ -11,7 +11,7 @@
 int main(void)
 {
 	int x, y;
-	int chars[10] = {'0','1','2','3','4','5','6','7','8','9'};
+	int cs[10] = {'0','1','2','3','4','5','6','7','8','9'};
 
 	for (x = 0; x <= 99; x++)
 	{
@@ -19,11 +19,11 @@ int main(void)
 		{
 			if (x != y && y > x)
 			{
-				putchar(chars[x / 10]);
-				putchar(chars[x % 10]);
+				putchar(cs[x / 10]);
+				putchar(cs[x % 10]);
 				putchar(' ');
-				putchar(chars[y / 10]);
-				putchar(chars[y % 10]);
+				putchar(cs[y / 10]);
+				putchar(cs[y % 10]);
 				
 				if (x < 98 || y < 99)
 				{
