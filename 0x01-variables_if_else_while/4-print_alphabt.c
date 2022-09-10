@@ -10,7 +10,9 @@
 
 int main(void)
 {
-	for (int c = 'a'; c <= 'z'; c++)
+	int c;
+
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		if (c == 'q' || c == 'e')
 			continue;
@@ -18,5 +20,6 @@ int main(void)
 	}
 
 	putchar('\n');
+
 	return (0);
 }
