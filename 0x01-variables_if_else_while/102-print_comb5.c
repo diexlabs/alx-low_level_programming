@@ -24,9 +24,12 @@ int main(void)
 				putchar(' ');
 				putchar(chars[y / 10]);
 				putchar(chars[y % 10]);
-
-				putchar(',');
-				putchar(' ');
+				
+				if (x < 98 || y < 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}

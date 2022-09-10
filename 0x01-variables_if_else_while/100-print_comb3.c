@@ -12,18 +12,28 @@ int main(void)
 {
 	int x, y;
 
-	for (x = '0'; x <= '9'; x++)
+	x = '0';
+	while (x <= '9')
 	{
-		for (y = '0'; y <= '9'; y++)
+		y = '0';
+		while (y <= '9')
 		{
 			if (y > x && y != x)
 			{
 				putchar(x);
 				putchar(y);
-				putchar(',');
-				putchar(' ');
+
+				if (x != '8' || y != '9')
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
+			y++;
 		}
+		x++;
 	}
+	putchar('\n');
+
 	return (0);
 }
