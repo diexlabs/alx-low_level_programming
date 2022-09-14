@@ -1,22 +1,6 @@
 #include "main.h"
 
 /**
- * main - major entry point
- *
- * Description: runs the other function
- *
- * Return: always returns 1
- */
-
-int main(void)
-{
-	_putchar(_abs(43) + '0');
-	_putchar(_abs(-100) + '0');
-
-	return (1);
-}
-
-/**
  * _abs - computes absolute value
  * @n: number to compute its absolute value
  *

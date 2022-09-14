@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * main - main entry point of the program
- *
- * Description: runs the other functions
- *
- * Return: returns 1
- */
-
-int main(void)
-{
-	_putchar(print_sign(2) + '0');
-	_putchar(print_sign(-2) + '0');
-	_putchar(print_sign(0) + '0');
-
-	return (1);
-}
-
-/**
  * print_sign - prints a sign
  * @n: number to check sign
  *

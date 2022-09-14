@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Description: runs the other functions
- *
- * Return: always returns 1
- */
-
-int main(void)
-{
-	_putchar(_islower('A') + '0');
-	_putchar(_islower('a') + '0');
-
-
-	return (0);
-}
-
-/**
  * _islower - checks for lower case
  * @c: an inter representing a char code
  *

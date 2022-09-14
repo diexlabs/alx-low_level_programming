@@ -1,22 +1,6 @@
 #include "main.h"
 
 /**
- * main - main entry for the programe
- *
- * Description: runs the other functions
- *
- * Return: always returns 1
- */
-
-int main(void)
-{
-	_putchar(_isalpha('c') + '0');
-	_putchar(_isalpha('-') + '0');
-
-	return (0);
-}
-
-/**
  * _isalpha - checks for alpha
  * @c: a charcode
  *
