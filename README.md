@@ -1,1 +1,1 @@
-* This is a tutorial on c programming from alx software engineering college.
+* this is another exercise on functions from alx software engineering
