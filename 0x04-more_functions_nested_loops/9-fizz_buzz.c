@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - major entry point
@@ -31,23 +32,25 @@ int main(void)
 		{
 			if (n / 100)
 			{
-				_putchar('0' + (n / 100));
-				_putchar('0' + (n % 100) / 10);
-				_putchar('0' + (n % 10));
+				putchar('0' + (n / 100));
+				putchar('0' + (n % 100) / 10);
+				putchar('0' + (n % 10));
 			}
 			else if (n / 10)
 			{
-				_putchar('0' + (n / 10));
-				_putchar('0' + (n % 10));
+				putchar('0' + (n / 10));
+				putchar('0' + (n % 10));
 			}
 			else
 			{
-				_putchar('0' + n);
+				putchar('0' + n);
 			}
 		}
-		_putchar(' ');
+		putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
+
+	return (0);
 }
 
 /**
@@ -60,10 +63,10 @@ int main(void)
 
 void fizz(void)
 {
-	_putchar('F');
-	_putchar('i');
-	_putchar('z');
-	_putchar('z');
+	putchar('F');
+	putchar('i');
+	putchar('z');
+	putchar('z');
 }
 
 
@@ -77,8 +80,8 @@ void fizz(void)
 
 void buzz(void)
 {
-	_putchar('B');
-	_putchar('u');
-	_putchar('z');
-	_putchar('z');
+	putchar('B');
+	putchar('u');
+	putchar('z');
+	putchar('z');
 }
