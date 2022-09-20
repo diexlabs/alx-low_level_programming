@@ -12,13 +12,8 @@ void print_rev(char *str)
 	int i;
 
 	i = 0;
-	while (1)
-	{
-		if (*(str + i) == '\0')
-			break;
+	while (*(str + i) != '\0')
 		i++;
-	}
-
 	for (; i >= 0; i--)
 	       _putchar(*(str + i));
 
