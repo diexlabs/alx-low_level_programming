@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - adds positive numbers and returns the sum
@@ -22,15 +23,14 @@ int main(int argc, char *argv[])
 		sum = 0;
 		while (argv[i])
 		{
-			if (sizeof(*argv[i]) != 4)
+			if (myAtoi(argv[i]) < 0)
 			{
-				printf("%ld %ld\n", sizeof(*argv[i]), sizeof(int));
 				printf("Error\n");
 				return (1);
 			}
 			else
 			{
-				sum += *argv[i];
+				sum += myAtoi(argv[i]);
 			}
 			i++;
 		}
@@ -41,3 +41,28 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+
+
+/**
+ * myAtoi - converts string to int or returns -1
+ * @str: the string to convert
+ *
+ * Return: returns the integer value or -1
+ */
+
+int myAtoi(char *str)
+{
+	int res;
+	int i;
+
+	res = 0;
+	for (i = 0; str[i] != '\0'; ++i)
+	{
+		if (str[i] - '0' < 0 || str[i] - '0' > 9)
+			return (-1);
+		res = res * 10 + str[i] - '0';
+	}
+
+	return (res);
+}
+
