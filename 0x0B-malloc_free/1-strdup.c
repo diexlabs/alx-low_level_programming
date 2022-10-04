@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	while (*(str + n))
 		n++;
 
-	p = malloc(n * sizeof(char));
+	p = malloc((n + 1) * sizeof(char));
 	if (p == NULL)
 		return (NULL);
 
@@ -30,6 +30,7 @@ char *_strdup(char *str)
 		p[n] = str[n];
 		n++;
 	}
+	p[n] = '\0';
 
 	return (p);
 }
