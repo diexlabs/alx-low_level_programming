@@ -28,6 +28,8 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	s = malloc((n1 + n2 + 1) * sizeof(char));
+	if (!s)
+		return (NULL);
 
 	n = 0;
 	n1 = 0;
