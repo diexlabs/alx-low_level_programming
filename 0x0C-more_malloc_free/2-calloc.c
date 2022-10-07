@@ -11,13 +11,18 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
+	char *ptr;
+	unsigned int i;
 
 	if (!nmemb || !size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
+
+	i = 0;
+	while (i < nmemb)
+		ptr[i++] = '\0';
 
 	return (ptr);
 }
