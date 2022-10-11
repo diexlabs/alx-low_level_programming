@@ -1,3 +1,6 @@
+#ifndef DOG_H
+#define DOG_H
+
 /**
  * struct dog - a struct for a dog instance
  * @name: the name of the dog
@@ -19,3 +22,5 @@ dog_t *new_dog(char *name, float age, char *owner);
 int _strlen(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
 void free_dog(dog_t *d);
+
+#endif
