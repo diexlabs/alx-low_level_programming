@@ -1,41 +1,26 @@
 #include <stdlib.h>
-#include <string.h>
 #include "lists.h"
-#include <stdio.h>
 
 /**
- * add_node_end - appends a node to the end of the list
- * @head: a pointer to the head of the list
- * @str: the str member of the new node
+ * list_len - returns the length of a list
+ * @h: the list head
  *
- * Return: address of new node or NULL
+ * Return: the len
  */
 
-list_t *add_node_end(list_t **head, const char *str)
+size_t list_len(const list_t *h)
 {
-	list_t *temp, *new;
+	list_t *current;
 	size_t n;
 
-	for (n = 0; str[n]; n++)
-		;
+	n = 0;
+	current = (list_t *)h;
+	while (current->next)
+	{
+		n += 1;
+		current = current->next;
+	}
+	n += 1;
 
-	printf("counting complete: %ld\n", n);
-	new = malloc(sizeof(list_t));
-	if (!new)
-		return (NULL);
-	printf("done creating new\n");
-	new->str = strdup(str);
-	new->len = n;
-	new->next = NULL;
-
-	printf("new created\n");
-	temp = *head;
-	printf("here1\n");
-	while (temp->next)
-		printf("next\n");
-		temp = temp->next;
-	printf("here\n");
-	temp->next = new;
-
-	return (new);
+	return (n);
 }
