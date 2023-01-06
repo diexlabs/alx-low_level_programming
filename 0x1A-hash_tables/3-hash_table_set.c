@@ -10,10 +10,10 @@
 * Return: 1 if success else 0
 */
 
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *node, *next;
+	shash_node_t *node, *next;
 
 	if (!key || !ht)
 		return (0);
