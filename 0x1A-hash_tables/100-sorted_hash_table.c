@@ -186,7 +186,7 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
-* shash_table_print - prints a hash table in reverse sorted format
+* shash_table_print_rev - prints a hash table in reverse sorted format
 * @ht: pointer to a hash table
 *
 * Description: prints out the items of a hash table in a reverse sorted order
@@ -216,7 +216,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 /**
-* hash_table_delete - deletes a hash table and frees all memories used
+* shash_table_delete - deletes a hash table and frees all memories used
 * @ht: pointer to the hash table
 *
 * Description: deletes a hash table and frees all the resources used
