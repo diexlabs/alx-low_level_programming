@@ -98,7 +98,7 @@ shash_node_t *add_sorted(shash_table_t *ht, shash_node_t *node)
 		return (NULL);
 
 	temp = ht->shead;
-	if (!temp)
+	if (temp == NULL)
 	{
 		ht->shead = node;
 		ht->stail = node;
@@ -107,7 +107,7 @@ shash_node_t *add_sorted(shash_table_t *ht, shash_node_t *node)
 	{
 		while (temp)
 		{
-			if (strcmp(node->key, temp->key) == -1)
+			if (strcmp(node->key, temp->key) < 0)
 			{
 				node->snext = temp;
 				node->sprev = temp->sprev;
@@ -159,6 +159,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 * shash_table_print - prints a hash table in sorted format
 * @ht: pointer to a hash table
 *
+* Description: prints the items of a hash table in sorted order
 * Return: void
 */
 void shash_table_print(const shash_table_t *ht)
@@ -188,6 +189,7 @@ void shash_table_print(const shash_table_t *ht)
 * shash_table_print - prints a hash table in reverse sorted format
 * @ht: pointer to a hash table
 *
+* Description: prints out the items of a hash table in a reverse sorted order
 * Return: void
 */
 void shash_table_print_rev(const shash_table_t *ht)
@@ -217,6 +219,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 * hash_table_delete - deletes a hash table and frees all memories used
 * @ht: pointer to the hash table
 *
+* Description: deletes a hash table and frees all the resources used
 * Return: void
 */
 void shash_table_delete(shash_table_t *ht)
